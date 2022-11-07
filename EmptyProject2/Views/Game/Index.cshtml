@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<form method="post" class="test-form">
+    <input id="secretNumber" name="secretNumber" class="form-control text-center d-none" type="number" placeholder="@ViewBag.SecretNumberVB" value="@ViewBag.SecretNumberVB" />
+    <label for="namber" class="fw-bold">Number: </label>
+    <div class="w-50">
+        @ViewBag.SecretNumberVB
+        <input id="secretNum" name="number" class="form-control text-center" type="number" />
+    </div>
+    <button class="btn btn-primary" type="submit">submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p class="text-danger text-center">@ViewBag.Message</p>
+}
+

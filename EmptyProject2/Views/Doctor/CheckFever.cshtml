@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Check-Fever";
+}
+
+
+<form class="test-form" method="post" asp-controller="Doctor" asp-action="CheckFever">
+    <label for="temperature" class="fw-bold">Inser temperature: </label>
+    <div class="w-50">
+        <input id="temp" name="temperature" class="form-control text-center" type="number" step="0.1" />
+    </div>
+    <button type="submit" class="btn btn-success w-50">Examine</button>
+
+    @if (ViewBag.Message != null)
+    {
+            <p class="text-danger">@ViewBag.Message</p>
+    }
+</form>
